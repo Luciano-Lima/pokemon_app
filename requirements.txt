@@ -4,6 +4,7 @@ docutils==0.20.1
 idna==3.6
 Kivy==2.3.0
 Kivy-Garden==0.1.5
+pygame==2.5.2
 pygments==2.17.2
 requests==2.31.0
 urllib3==2.2.1
