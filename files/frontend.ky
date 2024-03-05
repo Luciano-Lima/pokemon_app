@@ -1,0 +1,13 @@
+<ShowPokemon>:
+    GridLayout:
+        cols:2
+        Image:
+            source: 'files/pikachu-test-imgage.png'
+        TextInput:
+            text: 'Search your favorite Pikachu'
+
+
+<RootWidget>:
+    ShowPokemon:
+        id: show_Pokemon
+        name: 'show_Pokemon'
