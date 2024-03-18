@@ -2,7 +2,7 @@
 
 <ShowPokemon>:
     GridLayout:
-        cols: 1
+        cols: 2
         spacing: 10
         padding: 10
 
@@ -21,9 +21,13 @@
         AsyncImage:
             id: pokemon_image
             source: root.pokemon_image_source
-            allow_stretch: True
+            allow_stretch: False
             keep_ratio: False
             size_hint_y: 2
+
+        Label:
+            id: pokemon_description
+            text: root.pokemon_description
 
 <RootWidget>:
     ShowPokemon:
