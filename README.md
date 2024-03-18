@@ -8,6 +8,6 @@ This App is a simple Python application built using the Kivy framework. It utili
 - Displays the image of the searched Pokémon.
 - Shows the description of the searched Pokémon.
 
-## Installation
+## Dependencies
 
-To use this application, follow these steps:
+To use this application, install the dependencies requirements.txt file:
