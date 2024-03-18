@@ -17,7 +17,7 @@ class ShowPokemon(Screen):
             self.pokemon_image_source = pokemon_image_url
             self.fetch_pokemon_description(pokemon_name)
         else:
-            self.pokemon_description = f'No data found for {pokemon_name}'
+            self.pokemon_description = f"No data available for {pokemon_name}."
 
     def fetch_pokemon_image(self, pokemon_name):
         url = f"https://pokeapi.co/api/v2/pokemon/{pokemon_name.lower()}/"
