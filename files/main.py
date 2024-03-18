@@ -9,13 +9,15 @@ Builder.load_file('frontend.kv')
 
 class ShowPokemon(Screen):
     pokemon_image_source = StringProperty('')
+    pokemon_description =  StringProperty('')
 
     def search(self, pokemon_name):
         pokemon_image_url = self.fetch_pokemon_data(pokemon_name)
         if pokemon_image_url:
-            Clock.schedule_once(lambda dt: setattr(self, 'pokemon_image_source', pokemon_image_url), 0)
+            self.pokemon_image_source = pokemon_image_url
+            self.fetch_pokemon_description(pokemon_name)
         else:
-            print('Image not found for this Pokémon', {pokemon_name})
+            self.pokemon_description = f'No data found for {pokemon_name}'
 
 
     def fetch_pokemon_data(self, pokemon_name):
