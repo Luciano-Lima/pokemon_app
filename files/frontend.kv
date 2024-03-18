@@ -1,0 +1,30 @@
+#:kivy 1.0.9
+
+<ShowPokemon>:
+    GridLayout:
+        cols: 1
+        spacing: 10
+        padding: 10
+
+        TextInput:
+            id: user_query
+            size_hint_y: None
+            height: 40
+            hint_text: 'Enter Pokemon Name'
+
+        Button:
+            text: 'Search'
+            size_hint_y: None
+            height: 40
+            on_press: root.search(user_query.text)
+
+        AsyncImage:
+            id: pokemon_image
+            source: root.pokemon_image_source
+            allow_stretch: True
+            keep_ratio: False
+            size_hint_y: 2
+
+<RootWidget>:
+    ShowPokemon:
+        name: 'show_pokemon'
